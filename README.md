@@ -77,8 +77,14 @@ Windows 10 (version 1809 or later) or Windows 11, 64-bit, and administrator righ
 
 ## Found a problem?
 
-Use **Settings > Export report** to create a small `.zip` with the app version, your Windows version and the errors the app
-logged (your user name and computer name are removed). Send it to the maintainer. Nothing is sent unless you do it yourself
-or opt in to error reports in a future version.
+**Please do not send files to anyone** (archives, logs, screenshots that may show personal data): not to the maintainer and not
+in public. Unknown files are exactly how people get attacked, and a support channel should never depend on them.
 
-For **security** problems, do not open a public issue: read [SECURITY.md](SECURITY.md).
+A safer way is being built into the app: **optional** error reports, **off by default**, sent automatically as short plain text
+(never a file), cleaned of your user name, computer name and addresses on your own PC, with a **View what will be sent**
+button before anything leaves. The receiving side only accepts that exact format and never opens anything.
+
+Until then, describe the problem in plain text (what you clicked, the name of the screen, the app version shown in
+Settings > Updates).
+
+For **security** problems, do not open a public report: read [SECURITY.md](SECURITY.md).

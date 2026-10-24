@@ -11,8 +11,10 @@ Skontz Control System works on your PC and **does not collect or send data about
 
 ## Reports
 
-Nothing is sent automatically. **Settings > Export report** creates a `.zip` on your PC with the app version, your Windows
-version and the errors the app logged, with your user name, computer name and user folders removed. You decide whether to share it.
+Nothing is sent automatically. **Settings > Export report** only creates a file on your own PC for your own use; the app never
+uploads it. Please **do not send files to anyone**: unknown files are a common way to attack people. If a future version
+offers optional error reports they will be off by default, plain text only (never files), cleaned on your PC, and you will be able
+to see exactly what would be sent before it leaves.
 
 ## Local data
 
