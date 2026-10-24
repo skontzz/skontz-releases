@@ -18,7 +18,7 @@ Each action tells you what it changes, how long it takes, what you lose, and whe
 | Area | What it is for |
 |---|---|
 | **Dashboard** | A PC check-up (space, memory, security, startup, crashes, network) with a health score and one-click recommended actions. Reading is always safe: nothing changes until you confirm. |
-| **Hardware Monitor** | Live CPU, GPU, memory, disk and network sensors, plus the full PC specification (board, BIOS, memory modules, disks). Export to CSV or text. |
+| **Hardware Monitor** | Live CPU, GPU, memory, disk and network sensors, plus the full PC specification (board, BIOS, memory modules, disks). Save to CSV or text for your own use. |
 | **Fresh install** | A guided wizard for a freshly installed Windows: apps, the recommended tweaks, extras, and a summary before anything runs. |
 | **Windows / Mouse / Keyboard / GPU** | 235 reversible tweaks for performance, privacy, appearance, services, input and graphics, each with a plain-language explanation and the exact registry/service change it makes. |
 | **Debloat** | Removes preinstalled apps and features you do not want (some cannot be undone: the app says so before you confirm). |
@@ -40,7 +40,8 @@ Each action tells you what it changes, how long it takes, what you lose, and whe
   offers a Windows restore point.
 - **Preview first.** The big actions show the full plan (and what is left out) before you confirm, and Boost has a simulation switch.
 - **No data about your PC leaves your PC.** The only network traffic is the connection you ask for (winget installs, the speed
-  test) and a read-only check for new versions of this program. See [PRIVACY.md](PRIVACY.md).
+  test), a read-only check for new versions of this program and, only if you turn them on, short cleaned plain-text error
+  reports (off by default). See [PRIVACY.md](PRIVACY.md).
 - **Signed updates.** The list of versions is signed with a private key that never leaves the developer's computer. The app
   checks the signature, the file size and the SHA-256 of the installer before it opens it, and refuses anything that does not
   match, even if this repository were tampered with.
@@ -80,11 +81,16 @@ Windows 10 (version 1809 or later) or Windows 11, 64-bit, and administrator righ
 **Please do not send files to anyone** (archives, logs, screenshots that may show personal data): not to the maintainer and not
 in public. Unknown files are exactly how people get attacked, and a support channel should never depend on them.
 
-A safer way is being built into the app: **optional** error reports, **off by default**, sent automatically as short plain text
-(never a file), cleaned of your user name, computer name and addresses on your own PC, with a **View what will be sent**
-button before anything leaves. The receiving side only accepts that exact format and never opens anything.
+The safer way is built into the app: **optional** error reports, **off by default**. Turn them on in the first-run screen or
+in **Settings > Privacy and reports > Send error reports**; the app then sends its own errors (including unexpected closes)
+automatically as short plain text (never a file), cleaned of your user name, computer name, folders and addresses on your own
+PC. **View what will be sent** shows the exact text, the same switch turns them off, and **Delete my data** removes the
+anonymous id and anything waiting. The receiving side only accepts that exact format and never opens anything. Details:
+[PRIVACY.md](PRIVACY.md).
 
-Until then, describe the problem in plain text (what you clicked, the name of the screen, the app version shown in
-Settings > Updates).
+You can also describe the problem in plain text (what you clicked, the name of the screen, the app version shown in
+Settings > Updates) and add the short report from **Settings > Privacy and reports > View report text**: read it, press
+**Copy** and paste the text into your message. It is plain text made on your PC (no file), with your user name, computer
+name, folders and addresses already removed.
 
 For **security** problems, do not open a public report: read [SECURITY.md](SECURITY.md).
